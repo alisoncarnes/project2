@@ -20,7 +20,7 @@ plants.get('/:id', (req, res)=>{
 // INDEX
 plants.get('/', (req, res) => {
     Plants.find({}, (err, allPlants)=>{
-      res.render('plants/index.ejs', {
+      res.render('index.ejs', {
         plants: allPlants
     })
   })
