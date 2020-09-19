@@ -32,7 +32,7 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 
 // Controllers
 const plantsController = require('./controllers/plants_controller.js')
-app.use('/perennial', plantsController)
+app.use('/plants', plantsController)
 
 //___________________
 //Middleware
@@ -54,7 +54,7 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 //___________________
 //localhost:3000
 app.get('/' , (req, res) => {
-  res.redirect('/perennial');
+  res.redirect('/plants');
 });
 
 //___________________

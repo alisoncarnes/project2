@@ -11,7 +11,7 @@ const plants = express.Router()
 
 plants.get('/:id', (req, res)=>{
   Plants.findById(req.params.id, (err, foundPlant)=>{
-    res.render('perrenial/show.ejs', {
+    res.render('plants/show.ejs', {
       plants: foundPlant
     })
   })
@@ -20,7 +20,7 @@ plants.get('/:id', (req, res)=>{
 // INDEX
 plants.get('/', (req, res) => {
     Plants.find({}, (err, allPlants)=>{
-      res.render('perrenial/index.ejs', {
+      res.render('plants/index.ejs', {
         plants: allPlants
     })
   })
