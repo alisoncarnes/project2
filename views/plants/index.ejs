@@ -10,20 +10,12 @@
         <!-- header image goes here -->
 
       <div class="shop-plants">
-        <% for(let i = 0; i < plants.length; i++) { %>
-          <a href="/plants/<%=plants[i].id%>">
-            <img src="<%=plants[i].img%>" class="card-img"/>
-          </a><br/>
-
-
-
-          <%=plants[i].name%>
-          <form action="/plants/<%=plants[i].id%>?_method=DELETE" method="POST">
-                        <input type="submit" value="DELETE">
-          </form>
-    <% } %>
+        <a href="/home/plants">Shop all plants</a>
         </div>
 
+        <div class="shop-pots">
+          pots link here
+          </div>
       </div>
 
   </body>
