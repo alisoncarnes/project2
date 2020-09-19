@@ -3,9 +3,9 @@ const Plants = require('../models/plants.js')
 const plants = express.Router()
 
 //SHOP PLANTS ROUTE
-plants.get('/plants' , (req, res) => {
-  res.render('perennial/shop_plants.ejs');
-});
+// plants.get('/plants' , (req, res) => {
+//   res.render('perennial/shop_plants.ejs');
+// });
 
 // INDEX
 plants.get('/', (req, res) => {
