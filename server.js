@@ -32,7 +32,7 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 
 // Controllers
 const plantsController = require('./controllers/plants_controller.js')
-app.use('/plants', plantsController)
+app.use('/perennial', plantsController)
 
 //___________________
 //Middleware
