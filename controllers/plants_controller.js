@@ -20,7 +20,7 @@ plants.get('/:id', (req, res)=>{
 // INDEX
 plants.get('/', (req, res) => {
     Plants.find({}, (err, allPlants)=>{
-      res.render('index.ejs', {
+      res.render('plants/index.ejs', {
         plants: allPlants
     })
   })
@@ -37,8 +37,7 @@ plants.get('/setup/seed', (req, res)=>{
         price: 30,
         petFriendly: false,
         light: 'Thrives on medium to low indirect light.',
-        water: 'Water every 1-2 weeks, allowing soil to dry out
-        between waterings.',
+        water: 'Water every 1-2 weeks, allowing soil to dry out between waterings.',
         qty: 20
       },
       {
@@ -47,10 +46,8 @@ plants.get('/setup/seed', (req, res)=>{
         img: '/images/hoyaheart',
         price: 15,
         petFriendly: true,
-        light: 'Thrives in bright direct light, but can
-        tolerate bright indirect light.',
-        water: 'Water every 3-4 weeks, allowing soil
-        to dry out between waterings.',
+        light: 'Thrives in bright direct light, but can tolerate bright indirect light.',
+        water: 'Water every 3-4 weeks, allowing soil to dry out between waterings.',
         qty: 30
 
       },
@@ -61,8 +58,7 @@ plants.get('/setup/seed', (req, res)=>{
         price: 25,
         petFriendly: true,
         light: 'Thrives in medium to bright indirect light.',
-        water: 'Water weekly, allowing soil to dry out half way down
-        between waterings.',
+        water: 'Water weekly, allowing soil to dry out half way down between waterings.',
         qty: 15
       },
       {
@@ -72,8 +68,7 @@ plants.get('/setup/seed', (req, res)=>{
         price: 32,
         petFriendly: true,
         light: 'Thrives in medium to bright indrect light.',
-        water: 'Water every 1-2 weeks, allowing soil to dry out in
-        between waterings.',
+        water: 'Water every 1-2 weeks, allowing soil to dry out in between waterings.',
         qty: 5
       },
       {
@@ -83,8 +78,7 @@ plants.get('/setup/seed', (req, res)=>{
         price: 40,
         petFriendly: false,
         light: 'Thrives in bright indirect to direct light.',
-        water: 'Water every 2-3 weeks, allowing soil to dry out
-        between waterings.',
+        water: 'Water every 2-3 weeks, allowing soil to dry out between waterings.',
         qty: 10
       },
       {
@@ -94,8 +88,7 @@ plants.get('/setup/seed', (req, res)=>{
         price: 52,
         petFriendly: true,
         light: 'Thrives in bright indirect light.',
-        water: 'Water every week with 3-4 tablespoons of water,
-        allowing potting to dry out between waterings.'
+        water: 'Water every week with 3-4 tablespoons of water, allowing potting to dry out between waterings.'
       }
     ]
   )
