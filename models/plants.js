@@ -2,11 +2,14 @@ const mongoose = require('mongoose')
 
 const plantSchema = new mongoose.Schema({
   name: { type: String, required: true },
-  description: String,
+  size: String,
   img: String,
   price: {type: Number, minimum: 1},
-  qty: {type: Number, minimum: 1},
-  readyToShip: Boolean
+  petFriendly: Boolean,
+  light: String,
+  water: String,
+  qty: {type: Number, minimum: 1}
+
 })
 
 const Plants = mongoose.model('Plants', plantSchema)
