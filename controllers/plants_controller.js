@@ -10,7 +10,7 @@ plants.get('/plants' , (req, res) => {
 // INDEX
 plants.get('/', (req, res) => {
     Plants.find({}, (err, allPlants)=>{
-      res.render('perennial/index.ejs', {
+      res.render('index.ejs', {
         plants: allPlants
     })
   })
