@@ -4,8 +4,13 @@ const plants = express.Router()
 
 //SHOP PLANTS ROUTE
 plants.get('/plants' , (req, res) => {
-  res.render('shop_plants.ejs');
+  res.render('perennial/shop_plants.ejs');
 });
 
+// INDEX
+fruits.get('/', (req, res) => {
+    res.render('perennial/index.ejs', {
+  })
+})
 
 module.exports = plants
