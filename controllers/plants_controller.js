@@ -7,6 +7,12 @@ const plants = express.Router()
 //   res.render('perennial/plants.ejs');
 // });
 
+plants.delete('/:id', (req, res)=>{
+  Plants.findByIdAndRemove(req.params.id, (err, data)=>{
+    res.redirect('/plants')
+  })
+})
+
 // SHOW ROUTE
 
 plants.get('/:id', (req, res)=>{
@@ -27,13 +33,13 @@ plants.get('/', (req, res) => {
 })
 
 //SEED Routes
-plants.get('/setup/seed', (req, res)=>{
+plants.get('/seed', (req, res)=>{
   Plants.create(
     [
       {
         name: 'Jade Pothos',
         size: 'Small',
-        img: 'images/jadepothos.jpg',
+        img: 'https://i.ibb.co/vXh7S66/jadepothos.jpg',
         price: 30,
         petFriendly: false,
         light: 'Thrives on medium to low indirect light.',
@@ -54,7 +60,7 @@ plants.get('/setup/seed', (req, res)=>{
       {
         name: 'Bird\'s Nest Fern',
         size: 'Medium',
-        img: '/images/birdsnest.jpg',
+        img: '/images/birdnest.png',
         price: 25,
         petFriendly: true,
         light: 'Thrives in medium to bright indirect light.',
@@ -82,7 +88,7 @@ plants.get('/setup/seed', (req, res)=>{
         qty: 10
       },
       {
-        name: 'Petite White Orcid',
+        name: 'Petite White Orchid',
         size: 'Extra Small',
         img: '/images/orchid.jpg',
         price: 52,
@@ -90,7 +96,11 @@ plants.get('/setup/seed', (req, res)=>{
         light: 'Thrives in bright indirect light.',
         water: 'Water every week with 3-4 tablespoons of water, allowing potting to dry out between waterings.'
       }
-    ]
+    ],
+    (err, data)=>{
+      res.redirect('/plants')
+    }
   )
 })
+
 module.exports = plants
