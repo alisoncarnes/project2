@@ -7,6 +7,16 @@ const plants = express.Router()
 //   res.render('perennial/plants.ejs');
 // });
 
+// SHOW ROUTE
+
+plants.get('/:id', (req, res)=>{
+  Plants.findById(req.params.id, (err, foundPlant)=>{
+    res.render('perrenial/show.ejs', {
+      plants: foundPlant
+    })
+  })
+})
+
 // INDEX
 plants.get('/', (req, res) => {
     Plants.find({}, (err, allPlants)=>{
