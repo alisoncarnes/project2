@@ -8,7 +8,7 @@ plants.get('/plants' , (req, res) => {
 });
 
 // INDEX
-fruits.get('/', (req, res) => {
+plants.get('/', (req, res) => {
     res.render('perennial/index.ejs', {
   })
 })
