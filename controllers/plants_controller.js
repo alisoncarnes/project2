@@ -4,7 +4,7 @@ const plants = express.Router()
 
 // SHOP PLANTS ROUTE
 plants.get('/plants' , (req, res) => {
-  res.render('shop_plants.ejs');
+  res.render('perrenial/shop_plants.ejs');
 });
 
 // INDEX
