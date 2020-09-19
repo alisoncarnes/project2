@@ -8,12 +8,12 @@ plants.get('/plants' , (req, res) => {
 });
 
 // INDEX
-// plants.get('/', (req, res) => {
-//     Plants.find({}, (err, allPlants)=>{
-//       res.render('perennial/index.ejs', {
-//         plants: allPlants
-//     })
-//   })
-// })
+plants.get('/', (req, res) => {
+    Plants.find({}, (err, allPlants)=>{
+      res.render('perennial/index.ejs', {
+        plants: allPlants
+    })
+  })
+})
 
 module.exports = plants
