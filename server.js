@@ -54,7 +54,7 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 //___________________
 //localhost:3000
 app.get('/' , (req, res) => {
-  res.redirect('/perennial');
+  res.render('index.ejs');
 });
 
 //___________________
