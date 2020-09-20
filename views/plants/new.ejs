@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Add a New Plant</h1>
+      <form action="/plants" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required />
+        <label for="size">Size:</label>
+        <input type="text" name="size" required />
+        <label for="image">Image:</label>
+        <input type="text" name="img" required />
+        <label for="price">Price:</label>
+        <input type="number" name="price" required />
+        <label for="petfriendly">Pet Friendly:</label>
+        <input type="text" name="petFriendly" required />
+        <label for="light care">Plant care in light:</label>
+        <input type="text" name="light" required />
+        <label for="water instructions">Watering Instructions:</label>
+        <input type="text" name="water" required />
+        <label for="qty">Qty in Stock:</label>
+        <input type="number" name="qty" required />
+        <input type="submit" value="Submit">
+      </form>
+  </body>
+</html>

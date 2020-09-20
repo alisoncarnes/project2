@@ -5,8 +5,23 @@
     <title></title>
   </head>
   <body>
+    <img src="<%=plants.img%>" alt="">
     <h1><%=plants.name%></h1>
-    <form action="/home/<%=plants._id%>?_method=DELETE" method="POST">
+    <ul>
+      <li><%=plants.size%></li>
+      <li><%=plants.price%></li>
+      <li><%if(plants.petFriendly === true){%>
+        Pet Friendly
+        <% }else{ %>
+        This plant is not pet friendly
+      <%}%></li>
+      <li><%=plants.light%></li>
+      <li><%=plants.water%></li>
+      <li><%=plants.qty%></li>
+
+    </ul>
+  <button type="button" name="button"><a href="/plants/<%=plants.id%>/edit">Edit</a></button>
+    <form action="/plants/<%=plants._id%>?_method=DELETE" method="POST">
         <input type="submit" value="DELETE"/>
       </form>
   </body>

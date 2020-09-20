@@ -5,18 +5,20 @@
     <title></title>
   </head>
   <body>
-    <div class = "container">
-      <h1>Perennial Index Page</h1>
-        <!-- header image goes here -->
-
-      <div class="shop-plants">
-        <a href="/home/plants">Shop all plants</a>
-        </div>
-
-        <div class="shop-pots">
-          pots link here
-          </div>
+    <div class="container">
+      <div class="header">
+        <h1>Perrenial</h1>
+        <a href="/plants/new">Create a New Fruit</a>
       </div>
-
+      <div class="card-holder">
+        <% for(let i=0; i < plants.length; i++){ %>
+          <div class="card">
+            <a href="/plants/<%=plants[i]._id%>">
+              <img src="<%=plants[i].img%>" class="card-img-top"/>
+            </a> <br/>
+            <h2><%=plants[i].name%></h2>
+          </div>
+        <%}%>
+    </div>
   </body>
 </html>

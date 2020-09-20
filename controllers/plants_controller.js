@@ -3,22 +3,27 @@ const Plants = require('../models/plants.js')
 // const plantSeed = require('../models/plant_seed.js')
 const plants = express.Router()
 
-// SHOP PLANTS ROUTE
-// plants.get('/plants' , (req, res) => {
-//   res.render('perennial/plants.ejs');
-// });
+//NEW
+plants.get('/new', (req, res)=>{
+  res.render(
+    'plants/new.ejs'
+  )
+})
 
-plants.delete('/:id', (req, res)=>{
-  Plants.findByIdAndRemove(req.params.id, (err, data)=>{
-    res.redirect('/home')
+//EDIT
+plants.get('/:id/edit', (req, res)=>{
+  Plants.findById(req.param.id, (err, foundPlant)=>{
+    res.render('plants/edit.ejs',{
+      plants: foundPlant
+    })
   })
 })
 
-plants.get('/plants', (req, res) => {
-    Plants.find({}, (err, allPlants)=>{
-      res.render('plants/shopplants.ejs', {
-        plants: allPlants
-    })
+
+//DELETE
+plants.delete('/:id', (req, res)=>{
+  Plants.findByIdAndRemove(req.params.id, (err, deletedPlant)=>{
+    res.redirect('/plants')
   })
 })
 
@@ -33,26 +38,36 @@ plants.get('/:id', (req, res)=>{
   })
 })
 
+//UPDATE
 
-//SEED
-plants.get("/seed", (req, res) => {
-  Plants.deleteMany({}, ()=> {});
-  Plants.create(plantSeed, (error, data) => {
-    error ? res.status(400).json(error) : res.status(200).json(data);
-  });
+plants.put('/:id', (req, res)=>{
+  Plants.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    {new:true},
+    (err, updatedModel)=>{
+      res.redirect('/plants')
+    }
+  )
 })
 
+//CREATE
 
-//SHOP PLANTS PAGE
+plants.post('/', (req, res)=>{
+  Plants.create(req.body, (err, createdPlant)=>{
+    res.redirect('/plants')
+  })
+})
 
-// INDEX
-plants.get('/', (req, res) => {
-    Plants.find({}, (err, allPlants)=>{
-      res.render('plants/index.ejs', {
-        plants: allPlants
+//INDEX
+plants.get('/', (req, res)=>{
+  Plants.find({}, (err, allPlants)=>{
+    res.render('plants/index.ejs', {
+      plants: allPlants
     })
   })
 })
+
 
 //SEED Routes
 plants.get('/setup/seed', (req,res)=>{
@@ -120,7 +135,7 @@ plants.get('/setup/seed', (req,res)=>{
     }
 ],
 (err, data)=>{
-  res.redirect('/home/plants')
+  res.redirect('/plants')
 }
   )
 })
