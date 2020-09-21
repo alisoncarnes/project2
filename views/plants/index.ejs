@@ -4,20 +4,23 @@
      <%- include('../partials/head.ejs') %>
   </head>
   <body>
+    <nav>
+      <%- include ('../partials/nav.ejs') %>
+      </nav>
     <div class="container">
       <div class="header">
-        <h1 class="title">Perrenial</h1>
-        <a href="/plants/new">Create a New Fruit</a>
+        <h1 class="title">perrenial.</h1>
+        <a href="/plants/new">Add a New Plant</a>
       </div>
       <!-- HEADER IMG -->
       <div class="header-image">
           <h2>Go the Green <br>Way.</h2>
       </div>
 
-      <div class="shop-plants">Shop Plants</div><br/>
+      <div class="shop">Shop Plants</div><br/>
       <!-- CARDS -->
       <div class="card-holder">
-      
+
         <% for(let i=0; i < plants.length; i++){ %>
           <div class="card">
             <div class="card-body">

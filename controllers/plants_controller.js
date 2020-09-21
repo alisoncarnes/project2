@@ -7,6 +7,7 @@ const plants = express.Router()
 plants.get('/new', (req, res)=>{
   res.render(
     'plants/new.ejs'
+    , {currentUser: req.session.currentUser}
   )
 })
 
@@ -15,6 +16,7 @@ plants.get('/:id/edit', (req, res)=>{
   Plants.findById(req.param.id, (err, foundPlant)=>{
     res.render('plants/edit.ejs',{
       plants: foundPlant
+      ,currentUser: req.session.currentUser
     })
   })
 })
@@ -34,6 +36,7 @@ plants.get('/:id', (req, res)=>{
   Plants.findById(req.params.id, (err, foundPlant)=>{
     res.render('plants/show.ejs', {
       plants: foundPlant
+      ,  currentUser: req.session.currentUser
     })
   })
 })
@@ -64,6 +67,7 @@ plants.get('/', (req, res)=>{
   Plants.find({}, (err, allPlants)=>{
     res.render('plants/index.ejs', {
       plants: allPlants
+      ,currentUser: req.session.currentUser
     })
   })
 })
