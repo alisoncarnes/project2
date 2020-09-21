@@ -67,7 +67,7 @@ plants.get('/', (req, res)=>{
   Plants.find({}, (err, allPlants)=>{
     res.render('plants/index.ejs', {
       plants: allPlants
-      ,currentUser: req.session.currentUser
+      // ,currentUser: req.session.currentUser
     })
   })
 })
