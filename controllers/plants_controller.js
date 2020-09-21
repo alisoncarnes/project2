@@ -13,10 +13,10 @@ plants.get('/new', (req, res)=>{
 
 //EDIT
 plants.get('/:id/edit', (req, res)=>{
-  Plants.findById(req.param.id, (err, foundPlant)=>{
+  Plants.findById(req.params.id, (err, foundPlant)=>{
     res.render('plants/edit.ejs',{
-      plants: foundPlant
-      ,currentUser: req.session.currentUser
+      plant: foundPlant,
+      currentUser: req.session.currentUser
     })
   })
 })

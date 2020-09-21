@@ -8,6 +8,7 @@ const plantSchema = new mongoose.Schema({
   petFriendly: Boolean,
   light: String,
   water: String,
+  description: String,
   qty: {type: Number, minimum: 1}
 
 })

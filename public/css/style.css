@@ -144,12 +144,6 @@ ion-icon {
   margin-left: 60px;
 }
 
-.icon{
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: -20px;
-  color: #729F86;
-}
 
 .text{
   display: inline-block;
@@ -197,4 +191,18 @@ button a{
 .water{
   height: 50px;
   width: auto;
+}
+
+.col-description{
+  width: 400px;
+  margin-left: -60px;
+  background-color: #729F86;
+  padding: 15px;
+  color: whitesmoke;
+}
+
+.icon{
+  display: inline-block;
+  vertical-align: middle;
+  color: #FAAD94FF;
 }
