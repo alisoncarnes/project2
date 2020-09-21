@@ -72,7 +72,16 @@ plants.get('/', (req, res)=>{
   })
 })
 
-
+// Buy Route
+plants.put('/buy/:id', (req, res) => {
+  Plants.findByIdAndUpdate(
+    req.params.id,
+    { $inc: { qty: -1 } },
+    (err, updatedPlants) => {
+      res.redirect(`/plants/${req.params.id}`)
+    }
+  )
+})
 //SEED Routes
 plants.get('/setup/seed', (req,res)=>{
   Plants.create(

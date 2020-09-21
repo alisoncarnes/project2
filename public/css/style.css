@@ -155,13 +155,36 @@ ion-icon {
 .buttons{
   display: flex;
   justify-content: space-evenly;
+
 }
 
 button a{
   text-decoration: none;
-  color: black;
+  color: whitesmoke;
+  text-transform: uppercase;
+
+
+}
+button a:hover{
+  color: whitesmoke;
+  text-decoration: none;
 }
 
+button {
+  background-color: #729F86;
+  border: none;
+  padding: 10px;
+
+}
+
+input[type=submit] {
+    padding:10px;
+    background:#729F86;
+    color: whitesmoke;
+    width: 150px;
+    border: none;
+    -webkit-border-radius: 5px;
+}
 .card-container{
   width: 100%;
   display: flex;
@@ -206,4 +229,16 @@ button a{
   display: inline-block;
   vertical-align: middle;
   color: #FAAD94FF;
+}
+
+.col-buy{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buy-btn{
+  padding: 10px;
+  width: 100px;
+  margin-left: -220px
 }
