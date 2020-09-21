@@ -1,0 +1,44 @@
+.container{
+  width: 100%;
+}
+
+.header-image{
+  background-image: url('https://i.ibb.co/7SP53Mr/header4.jpg');
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 750px;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   /* align-items: flex-end; */
+   padding: 2em;
+   box-sizing: border-box;
+}
+
+.header-image h2{
+  font-size: 3em;
+  margin: 0;
+  padding-left: 420px;
+  padding-top: 300px;
+  position: absolute;
+}
+
+.card-holder{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* align-content:  center; */
+
+}
+
+.card-img-top{
+  width: 250px;
+  height: auto;
+}
+
+.card{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
