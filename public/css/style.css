@@ -5,9 +5,30 @@
   width: 100%;
 }
 
-.header{
+.border-top{
+  background-color: #729F86;
+  color: #729F86;
+  padding: 20px;
+}
+
+nav{
   display: flex;
+  padding-right: 100px;
+  /* justify-content: space-evenly; */
   justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  color: #729F86;
+}
+
+nav a{
+  color: #729F86;
+  font-size: 1em;
+  font-weight: bolder;
+}
+
+.signup .login {
+float: right;
 }
 
 .title{
@@ -62,6 +83,13 @@ a:hover{
   margin-bottom: 20px;
 }
 
+.card-header{
+  /* padding-top: 1?0px; */
+  font-family: 'Bebas Neue';
+  color: #729F86;
+  text-align: center;
+}
+
 .shop{
   background-color: #FAAD94FF;
   color: #729F86;
@@ -71,4 +99,22 @@ a:hover{
   margin-top: 20px;
   text-align: center;
   padding: 10px;
+}
+
+footer{
+  background-color: #729F86;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+footer h6{
+  color: white;
+  font-size: 30px;
+  padding-top: 10px;
+}
+
+ion-icon {
+    font-size: 50px;
 }

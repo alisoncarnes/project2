@@ -1,13 +1,17 @@
-<ul>
+
+  <h1><a href="/plants" class="title">perrenial.</a></h1>
+  <a href="/plants/new">ADD A NEW PLANT</a>
 <% if (currentUser) { %>
-  <li>Welcome <%= currentUser.username %></li>
-  <li>
+  Welcome <%= currentUser.username %>
+
     <form action="/sessions?_method=DELETE" method="POST">
       <input type="submit" value="Log Out" class="btn-small red" />
     </form>
-  </li>
+
   <% } else { %>
-  <li><a href="/users/new">Sign Up</a> / <a href="/sessions/new">Log In</a></li>
+    <div class="users">
+      <a href="/users/new" class="signup">SIGN UP</a> / <a href="/sessions/new" class="login">LOG IN</a>
+    </div>
+
 
   <% } %>
-</ul>

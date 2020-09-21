@@ -4,17 +4,15 @@
      <%- include('../partials/head.ejs') %>
   </head>
   <body>
-    <nav>
-      <%- include ('../partials/nav.ejs') %>
-      </nav>
+
     <div class="container">
+      <%- include ('../partials/border.ejs') %>
       <div class="header">
-        <h1 class="title"><a href="/plants" class="title">perrenial.</a></h1>
-        <a href="/plants/new">Add a New Plant</a>
-        <nav>
+          <nav>
           <%- include ('../partials/nav.ejs') %>
           </nav>
       </div>
+
       <!-- HEADER IMG -->
       <div class="header-image">
           <h2>Go the Green <br>Way.</h2>
@@ -29,12 +27,17 @@
             <div class="card-body">
             <a href="/plants/<%=plants[i]._id%>">
               <img src="<%=plants[i].img%>" class="card-img-top"/>
-            </a> <br/>
+            </a> <br><br>
             <h5 class="card-header"><%=plants[i].name%></h5>
           </div>
         </div>
         <%}%>
     </div>
+
+    <!-- footer -->
+    <footer>
+      <%- include ('../partials/footer.ejs') %>
+    </footer>
   </div>
   </body>
 </html>
