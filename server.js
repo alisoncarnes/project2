@@ -48,7 +48,7 @@ app.use(express.urlencoded({ extended: true }));// extended: false - does not al
 app.use(express.json());// returns middleware that only parses JSON - may or may not need it depending on your project
 app.use(
   session({
-    secret: process.env.SECRET, //a random string do not copy this value or your stuff will get hacked
+    secret: "FeedMeSeymour", //a random string do not copy this value or your stuff will get hacked
     resave: false, // default more info: https://www.npmjs.com/package/express-session#resave
     saveUninitialized: false // default  more info: https://www.npmjs.com/package/express-session#resave
   })
