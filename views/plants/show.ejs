@@ -1,27 +1,74 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-   <%- include('../partials/head.ejs') %>
+    <%- include('../partials/head.ejs') %>
   </head>
   <body>
-    <img src="<%=plants.img%>" alt="">
-    <h1><%=plants.name%></h1>
-    <ul>
-      <li><%=plants.size%></li>
-      <li><%=plants.price%></li>
-      <li><%if(plants.petFriendly === true){%>
+    <div class="container">
+      <%- include ('../partials/border.ejs') %>
+      <div class="header">
+          <nav>
+          <%- include ('../partials/nav.ejs') %>
+          </nav>
+      </div>
+      <img src="<%=plants.img%>" class="show-image">
+      <div class="row">
+
+        <div class="col"><h1><%=plants.name%></h1><br>
+          <div class="buttons">
+          <button type="button" name="button"><a href="/plants/<%=plants._id%>/edit">Edit</a></button>
+            <form action="/plants/<%=plants._id%>?_method=DELETE" method="POST">
+              <input type="submit" value="DELETE"/>
+            </form>
+          </div>
+        </div>
+        <div class="col"><h2 class="price">$<%=plants.price%></h2></div>
+        <div class="w-100"></div>
+        <div class="w-100"></div>
+        <br><br><br><br><br><br><br>
+        <div class="col">
+        <ion-item>
+          <ion-icon name="leaf" class="icon"></ion-icon>
+          <span class="text">plant size: <%=plants.size%></span>
+        </ion-item>
+        </div>
+      </div>
+
+      <!-- plant info -->
+
+      <div class="card-container">
+      <div class="plant-info">
+        <ion-icon name="paw" class="paw"></ion-icon><br><br>
+        <%if(plants.petFriendly === true){%>
         Pet Friendly
         <% }else{ %>
         This plant is not pet friendly
-      <%}%></li>
-      <li><%=plants.light%></li>
-      <li><%=plants.water%></li>
+      <%}%>
+      </div>
+      <div class="plant-info">
+        <img src="https://www.flaticon.com/svg/static/icons/svg/869/869869.svg" class="light"/>
+        <br><br>
+        <h6>light:</h6>
+      <%=plants.light%>
+      </div>
+      <div class="plant-info">
+        <img src="https://www.flaticon.com/svg/static/icons/svg/869/869861.svg" class="water">
+        <br><br>
+        <h6>water:</h6>
+        <%=plants.water%>
+      </div>
+
+
       <li><%=plants.qty%></li>
 
     </ul>
-  <button type="button" name="button"><a href="/plants/<%=plants._id%>/edit">Edit</a></button>
-    <form action="/plants/<%=plants._id%>?_method=DELETE" method="POST">
-        <input type="submit" value="DELETE"/>
-      </form>
+
+
+      </div>
+    </div>
+      <!-- footer -->
+      <footer>
+        <%- include ('../partials/footer.ejs') %>
+      </footer>
   </body>
 </html>
