@@ -246,7 +246,7 @@ input[type=submit] {
 }
 
 .edit-header{
-  background-image: url('https://i.ibb.co/DK25T6Y/opt-aboutcom-coeus-resources-content-migration-treehugger-images-2020-01-houseplant-decor-0533dfa00f.jpg');
+  background-image: url('https://i.ibb.co/z6HzGtN/editheader1.jpg');
   background-repeat: no-repeat;
   width: 100%;
   height: 500px;
@@ -309,3 +309,10 @@ input:required:focus {
   border: 3px solid red;
   outline: none;
 }
+
+/* users pages */
+.users-header{
+  background-image: url('https://i.ibb.co/nn9w66q/users1.jpg');
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 500px;
