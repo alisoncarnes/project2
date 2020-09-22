@@ -4,25 +4,53 @@
      <%- include('../partials/head.ejs') %>
   </head>
   <body>
-    <h1>Add a New Plant</h1>
+    <div class="container">
+      <%- include ('../partials/border.ejs') %>
+      <div class="header">
+        <nav>
+        <%- include ('../partials/nav.ejs') %>
+        </nav>
+      </div>
+      <div class="edit-header">
+          <h1>perrenial.</h1><br>
+          <h2>create a new plant.</h2>
+      </div>
+
       <form action="/plants" method="POST">
-        <label for="name">Name:</label>
-        <input type="text" name="name" required />
-        <label for="size">Size:</label>
-        <input type="text" name="size" />
-        <label for="image">Image:</label>
-        <input type="text" name="img" required />
-        <label for="price">Price:</label>
-        <input type="number" name="price" required />
-        <label for="petfriendly">Pet Friendly:</label>
-        <input type="text" name="petFriendly" required />
-        <label for="light care">Plant care in light:</label>
-        <input type="text" name="light"  />
-        <label for="water instructions">Watering Instructions:</label>
-        <input type="text" name="water"  />
-        <label for="qty">Qty in Stock:</label>
-        <input type="number" name="qty" required />
-        <input type="submit" value="Submit">
+        <fieldset class="edit-info">
+
+          <legend>fill out the required* fields here:</legend>
+
+          <label for="name">Name*: </label>
+          <input type="text" name="name" required /><br><br>
+
+          <label for="size">Size:</label>
+          <input type="text" name="size" /><br><br>
+
+          <label for="image">Image*:</label>
+          <input type="text" name="img" required /><br><br>
+
+          <label for="price">Price*:</label>
+          <input type="number" name="price" required /><br><br>
+
+          <label for="petfriendly">Pet Friendly*:</label>
+          <input type="text" name="petFriendly" required /><br><br>
+
+          <label for="light care">Plant care in light:</label>
+          <input type="text" name="light"  /><br><br>
+
+          <label for="water instructions">Watering Instructions:</label>
+          <input type="text" name="water"  /><br><br>
+
+          <label for="qty">Qty in Stock*:</label>
+          <input type="number" name="qty" required /><br><br>
+
+          <input type="submit" value="Submit">
+        </fieldset>
       </form>
+      <footer>
+        <%- include ('../partials/footer.ejs') %>
+      </footer>
+    </div>
   </body>
 </html>

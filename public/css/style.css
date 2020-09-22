@@ -304,3 +304,8 @@ input, textarea{
   padding: 10px;
   box-sizing: border-box;
 }
+/* required */
+input:required:focus {
+  border: 3px solid red;
+  outline: none;
+}
