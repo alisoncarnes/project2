@@ -243,3 +243,35 @@ input[type=submit] {
   margin-left: -220px;
   color: whitesmoke;
 }
+
+.edit-header{
+  background-image: url('https://i.ibb.co/DK25T6Y/opt-aboutcom-coeus-resources-content-migration-treehugger-images-2020-01-houseplant-decor-0533dfa00f.jpg');
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 500px;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   /* align-items: flex-end; */
+   padding: 2em;
+   box-sizing: border-box;
+}
+
+.edit-header h1{
+  color:whitesmoke;
+  text-shadow: 3px 3px #729F86;
+  font-size: 4em;
+}
+
+.edit-header h2{
+  background-color: #FAAD94FF;
+  font-family: 'Bebas Neue';
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 2em;
+  padding: 10px;
+  width: 350px;
+  text-align: center;
+  /* text-transform: cursive; */
+}

@@ -4,8 +4,18 @@
  <%- include('../partials/head.ejs') %>
   </head>
   <body>
+    <div class="container">
+        <%- include ('../partials/border.ejs') %>
+      <div class="header">
+          <nav>
+          <%- include ('../partials/nav.ejs') %>
+          </nav>
+      </div>
+      <div class="edit-header">
+          <h1><%=plant.name%></h1><br>
+          <h2>Edit Care Instructions.</h2>
+      </div>
 
-    <h1>Edit the Care Instructions</h1>
         <form action="/plants/<%=plant._id%>?_method=PUT" method="POST">
         <label for="name">Name:</label>
         <input type="text" name="name" value="<%=plant.name%>" />
@@ -14,6 +24,10 @@
         <input type="submit" name="Edit" value="Edit">
     </form>
 
+    <footer>
+      <%- include ('../partials/footer.ejs') %>
+    </footer>
 
+  </div>
   </body>
 </html>
