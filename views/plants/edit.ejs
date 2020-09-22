@@ -17,12 +17,24 @@
       </div>
 
         <form action="/plants/<%=plant._id%>?_method=PUT" method="POST">
-        <label for="name">Name:</label>
-        <input type="text" name="name" value="<%=plant.name%>" />
-        <label for="description">Description:</label>
-        <input type="text" name="description" value="<%=plant.description%>"/>
-        <input type="submit" name="Edit" value="Edit">
-    </form>
+          <!-- fieldset for edit -->
+          <fieldset class="edit-info">
+          <!-- legend for edit info -->
+          <legend>EDIT CARE INSTRUCTIONS</legend>
+          <!-- light -->
+            <label for="light">EDIT LIGHT CARE:</label>
+            <input type="textarea" name="light" value="<%=plant.light%>" />
+          <!-- water   -->
+          <br><br>
+            <label for="water">EDIT WATER CARE:</label>
+            <input type="textarea" name="water" value="<%=plant.water%>"/>
+          <!-- submit -->
+          <br><br>
+            <input type="submit" name="edit" value="EDIT">
+
+
+          </fieldset>
+        </form>
 
     <footer>
       <%- include ('../partials/footer.ejs') %>

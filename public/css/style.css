@@ -143,6 +143,7 @@ ion-icon {
 .price{
   margin-top: 6px;
   margin-left: 60px;
+  /* float: right; */
 }
 
 
@@ -193,7 +194,7 @@ input[type=submit] {
 
 .plant-info{
   width: 32%;
-  height: 200px;
+  height: 350px;
   margin-top: 20px;
   box-shadow: 3px #eee;
   box-sizing: border-box;
@@ -274,4 +275,32 @@ input[type=submit] {
   width: 350px;
   text-align: center;
   /* text-transform: cursive; */
+}
+
+/* forms */
+
+fieldset{
+  border: 3px solid #ccc;
+  padding: 30px;
+
+}
+
+legend{
+  padding: 5px;
+  font-size: 2em;
+  font-family: 'Lato', sans-serif;
+  color: #729F86;
+  font-weight: bold;
+}
+
+label{
+  font-family: 'Bebas Neue';
+  font-size: 20px;
+  display: block;
+}
+
+input, textarea{
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
 }
