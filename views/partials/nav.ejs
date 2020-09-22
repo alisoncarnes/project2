@@ -2,7 +2,7 @@
   <h1><a href="/plants" class="title">perrenial.</a></h1>
   <a href="/plants/new">ADD A NEW PLANT</a>
 <% if (currentUser) { %>
-  Welcome <%= currentUser.username %>
+<span>  Welcome <%= currentUser.username %> </span>
 
     <form action="/sessions?_method=DELETE" method="POST">
       <input type="submit" value="Log Out" class="btn-small red" />

@@ -49,7 +49,7 @@ plants.put('/:id', (req, res)=>{
     req.body,
     {new:true},
     (err, updatedModel)=>{
-      res.redirect('/plants')
+      res.redirect(`/plants/${req.params.id}`)
     }
   )
 })
