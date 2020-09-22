@@ -14,14 +14,15 @@
         <div class="users-header">
             <h1>welcome back !</h1>
         </div>
-      <h1>Log In</h1>
+
       <form action="/sessions" method="POST">
         <fieldset class="edit-info">
+          <legend>sign in</legend>
           <label for="name">User Name:</label>
-          <input type="text" name="username" required/>
+          <input type="text" name="username" required/><br><br>
           <label for="color">Password:</label>
-          <input type="password" name="password" />
-          <br>
+          <input type="password" name="password" required />
+          <br><br>
           <input type="submit" value="Submit">
         </fieldset>
       <form>
